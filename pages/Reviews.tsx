@@ -3,7 +3,7 @@ import { Card } from '../components/ui/Card';
 import { Review } from '../types';
 
 const REVIEWS: Review[] = [
-  { id: '1', author: 'Alex Cohen', role: 'CEO', company: 'TechStart', rating: 5, text: 'FinFlow completely changed how we handle our books. I used to dread month-end; now it takes 5 minutes.', avatar: 'alex' },
+  { id: '1', author: 'Alex', role: 'CEO', company: 'TechStart', rating: 5, text: 'FinFlow completely changed how we handle our books. I used to dread month-end; now it takes 5 minutes.', avatar: 'alex' },
   { id: '2', author: 'Lisa Wang', role: 'Founder', company: 'Bloom', rating: 5, text: 'The best investment we made this year. The tax credits they found us paid for the service 10x over.', avatar: 'lisa' },
   { id: '3', author: 'James Miller', role: 'CFO', company: 'Nexus', rating: 4, text: 'Incredible support team. They actually understand SaaS metrics and helped us prepare for our Series B.', avatar: 'james' },
   { id: '4', author: 'Sarah Jenkins', role: 'Founder', company: 'Loop', rating: 5, text: 'I sleep better at night knowing my finances are compliant. The dashboard is beautiful and easy to understand.', avatar: 'sarah' },
@@ -16,8 +16,8 @@ export const Reviews: React.FC = () => {
     <div className="pt-32 pb-24 min-h-screen">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center max-w-2xl mx-auto mb-20">
-          <h1 className="text-4xl font-bold text-slate-900 mb-6">Loved by fast-growing teams</h1>
-          <p className="text-lg text-slate-600">
+          <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 tracking-tight">Loved by fast-growing teams</h1>
+          <p className="text-lg md:text-xl text-slate-600 leading-relaxed">
             Join thousands of founders who trust FinFlow with their financial operations.
           </p>
         </div>
@@ -37,7 +37,7 @@ export const Reviews: React.FC = () => {
                 </div>
                 <div>
                   <div className="font-bold text-slate-900 text-sm">{review.author}</div>
-                  <div className="text-xs text-slate-500">{review.role} @ {review.company}</div>
+                  <div className="text-xs font-medium text-slate-500">{review.role} @ {review.company}</div>
                 </div>
               </div>
             </Card>

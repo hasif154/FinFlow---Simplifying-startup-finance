@@ -47,8 +47,8 @@ export const Blog: React.FC = () => {
     <div className="pt-32 pb-24 min-h-screen">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center max-w-2xl mx-auto mb-20">
-          <h1 className="text-4xl font-bold text-slate-900 mb-6">Resources & Insights</h1>
-          <p className="text-lg text-slate-600">
+          <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 tracking-tight">Resources & Insights</h1>
+          <p className="text-lg md:text-xl text-slate-600 leading-relaxed">
             Expert advice on startup finance, tax strategy, and growth. Written by our team of CPAs and financial experts.
           </p>
         </div>
@@ -68,15 +68,15 @@ export const Blog: React.FC = () => {
                   </div>
                 </div>
                 <div className="p-6 flex flex-col flex-1">
-                  <div className="flex items-center gap-2 text-xs text-slate-500 mb-3">
+                  <div className="flex items-center gap-2 text-xs font-medium text-slate-500 mb-3">
                     <span>{post.date}</span>
                     <span>•</span>
                     <span>{post.readTime}</span>
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-brand-600 transition-colors">
+                  <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-brand-600 transition-colors tracking-tight leading-snug">
                     {post.title}
                   </h3>
-                  <p className="text-slate-600 text-sm mb-6 flex-1 line-clamp-3">
+                  <p className="text-slate-600 text-sm leading-relaxed mb-6 flex-1 line-clamp-3">
                     {post.excerpt}
                   </p>
                   <div className="flex items-center gap-3 pt-4 border-t border-slate-100">

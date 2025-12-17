@@ -1,5 +1,4 @@
 import React from 'react';
-import { Zap, Twitter, Linkedin, Github } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
@@ -8,18 +7,16 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="col-span-1 md:col-span-1">
              <div className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 rounded-lg bg-brand-600 text-white flex items-center justify-center">
-                <Zap size={18} fill="currentColor" />
-              </div>
-              <span className="font-bold text-xl text-slate-900 tracking-tight">FinFlow</span>
+              {/* Text-only logo in brand color */}
+              <span className="font-bold text-2xl text-brand-600 tracking-tight">FinFlow</span>
             </div>
             <p className="text-slate-500 text-sm leading-relaxed mb-6">
               Your bookkeeping on autopilot. Simplify your startup's finances with centralized metrics and certified experts.
             </p>
-            <div className="flex gap-4">
-              {[Twitter, Linkedin, Github].map((Icon, i) => (
-                <a key={i} href="#" className="text-slate-400 hover:text-brand-600 transition-colors">
-                  <Icon size={20} />
+            <div className="flex gap-6">
+              {['Twitter', 'LinkedIn', 'GitHub'].map((platform) => (
+                <a key={platform} href="#" className="text-slate-500 font-medium hover:text-brand-600 transition-colors">
+                  {platform}
                 </a>
               ))}
             </div>

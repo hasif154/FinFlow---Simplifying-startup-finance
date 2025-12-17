@@ -34,8 +34,8 @@ export const Pricing: React.FC = () => {
     <div className="pt-32 pb-24 min-h-screen">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <h1 className="text-4xl font-bold text-slate-900 mb-6">Simple, transparent pricing</h1>
-          <p className="text-lg text-slate-600 mb-8">
+          <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 tracking-tight">Simple, transparent pricing</h1>
+          <p className="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed">
             No hidden fees. No hourly billing. Just a flat monthly rate that grows with your startup.
           </p>
           
@@ -70,16 +70,16 @@ export const Pricing: React.FC = () => {
               )}
               
               <div className="mb-8">
-                <h3 className="text-xl font-bold text-slate-900 mb-2">{plan.name}</h3>
-                <p className="text-slate-500 text-sm h-10">{plan.description}</p>
+                <h3 className="text-xl font-bold text-slate-900 mb-2 tracking-tight">{plan.name}</h3>
+                <p className="text-slate-500 text-sm h-10 leading-relaxed">{plan.description}</p>
               </div>
 
               <div className="mb-8">
                 <div className="flex items-baseline gap-1">
-                  <span className="text-4xl font-bold text-slate-900">${isAnnual ? Math.floor(plan.price * 0.8) : plan.price}</span>
-                  <span className="text-slate-500">/mo</span>
+                  <span className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight">${isAnnual ? Math.floor(plan.price * 0.8) : plan.price}</span>
+                  <span className="text-slate-500 font-medium">/mo</span>
                 </div>
-                {isAnnual && <div className="text-sm text-green-600 mt-1 font-medium">Billed annually</div>}
+                {isAnnual && <div className="text-sm text-green-600 mt-2 font-medium">Billed annually</div>}
               </div>
 
               <Button 
@@ -90,9 +90,9 @@ export const Pricing: React.FC = () => {
               </Button>
 
               <div className="space-y-4">
-                <div className="text-xs font-semibold text-slate-900 uppercase tracking-wider">What's included</div>
+                <div className="text-xs font-bold text-slate-900 uppercase tracking-wider">What's included</div>
                 {plan.features.map((feature) => (
-                  <div key={feature} className="flex items-start gap-3 text-sm text-slate-600">
+                  <div key={feature} className="flex items-start gap-3 text-sm text-slate-600 leading-snug">
                     <Check size={18} className="text-brand-500 shrink-0" />
                     <span>{feature}</span>
                   </div>
@@ -103,8 +103,8 @@ export const Pricing: React.FC = () => {
         </div>
 
         <div className="mt-20 text-center">
-          <p className="text-slate-500 mb-4">Need a custom enterprise plan?</p>
-          <a href="#" className="text-brand-600 font-semibold hover:underline">Contact Sales →</a>
+          <p className="text-slate-500 mb-4 font-medium">Need a custom enterprise plan?</p>
+          <a href="#" className="text-brand-600 font-semibold hover:text-brand-700 transition-colors">Contact Sales →</a>
         </div>
       </div>
     </div>

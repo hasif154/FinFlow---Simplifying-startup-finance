@@ -11,30 +11,30 @@ export const BlogPostDetail: React.FC = () => {
   return (
     <article className="pt-32 pb-24 min-h-screen">
       <div className="max-w-3xl mx-auto px-6">
-        <Link to="/blog" className="inline-flex items-center gap-2 text-slate-500 hover:text-brand-600 mb-8 transition-colors">
+        <Link to="/blog" className="inline-flex items-center gap-2 text-sm font-medium text-slate-500 hover:text-brand-600 mb-8 transition-colors">
           <ArrowLeft size={16} />
           Back to Resources
         </Link>
 
         <header className="mb-12">
-          <div className="inline-block px-3 py-1 bg-brand-50 text-brand-700 rounded-full text-sm font-medium mb-4">
+          <div className="inline-block px-3 py-1 bg-brand-50 text-brand-700 rounded-full text-xs font-bold uppercase tracking-wide mb-6">
             Guides
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
+          <h1 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight tracking-tight">
             How to Automate Your Startup Finances in 2024
           </h1>
           <div className="flex items-center gap-4">
-            <img src={`https://picsum.photos/seed/Sarah/100`} alt="Author" className="w-12 h-12 rounded-full ring-4 ring-white" />
+            <img src={`https://picsum.photos/seed/Sarah/100`} alt="Author" className="w-12 h-12 rounded-full ring-4 ring-white shadow-sm" />
             <div>
-              <div className="font-semibold text-slate-900">Sarah Chen</div>
-              <div className="text-sm text-slate-500">Head of Product • Oct 12, 2024</div>
+              <div className="font-bold text-slate-900">Sarah Chen</div>
+              <div className="text-sm font-medium text-slate-500">Head of Product • Oct 12, 2024</div>
             </div>
           </div>
         </header>
 
         {/* Prose Content (Simulated MDX) */}
-        <div className="prose prose-lg prose-slate prose-headings:font-bold prose-headings:tracking-tight prose-a:text-brand-600 hover:prose-a:text-brand-700 prose-img:rounded-2xl prose-img:shadow-lg">
-          <p className="lead">
+        <div className="prose prose-lg prose-slate prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-slate-900 prose-p:leading-relaxed prose-a:text-brand-600 hover:prose-a:text-brand-700 prose-img:rounded-2xl prose-img:shadow-lg">
+          <p className="lead text-xl text-slate-600 leading-relaxed">
             The era of shoebox receipts and manual Excel spreadsheets is over. Modern startups need speed, accuracy, and scalability. Here is how you can put your finance stack on autopilot.
           </p>
           
@@ -49,8 +49,10 @@ export const BlogPostDetail: React.FC = () => {
           </ul>
 
           <div className="my-8 p-6 bg-blue-50 border border-blue-100 rounded-xl not-prose">
-            <h4 className="font-bold text-blue-900 mb-2">Pro Tip</h4>
-            <p className="text-blue-800 text-sm">
+            <h4 className="font-bold text-blue-900 mb-2 flex items-center gap-2">
+              <span className="bg-blue-200 text-blue-700 text-xs px-2 py-0.5 rounded uppercase tracking-wider">Pro Tip</span>
+            </h4>
+            <p className="text-blue-800 text-base leading-relaxed">
               Automating your expense categorization can reduce your monthly close time by up to 80%.
             </p>
           </div>
@@ -76,9 +78,9 @@ export const BlogPostDetail: React.FC = () => {
         <div className="mt-16 pt-8 border-t border-slate-200">
           <div className="bg-slate-900 rounded-2xl p-8 md:p-12 text-center text-white relative overflow-hidden">
             <div className="relative z-10">
-              <h3 className="text-2xl font-bold mb-4">Ready to automate your finances?</h3>
-              <p className="text-slate-300 mb-8 max-w-md mx-auto">Join 1,000+ startups saving time and money with FinFlow.</p>
-              <Button size="lg" className="bg-white text-slate-900 hover:bg-slate-100 hover:shadow-white/20">
+              <h3 className="text-2xl md:text-3xl font-bold mb-4 tracking-tight">Ready to automate your finances?</h3>
+              <p className="text-slate-300 mb-8 max-w-md mx-auto text-lg">Join 1,000+ startups saving time and money with FinFlow.</p>
+              <Button size="lg" className="bg-white text-slate-900 hover:bg-slate-100 hover:shadow-white/20 font-semibold">
                 Get Started for Free
               </Button>
             </div>
